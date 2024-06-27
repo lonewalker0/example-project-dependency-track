@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+  <modelVersion>4.0.0</modelVersion>
+    
+  <parent>
+        
+    <groupId>com.example</groupId>
+        
+    <artifactId>myproject</artifactId>
+        
+    <version>0.3</version>
+      
+  </parent>
+    
+  <groupId>com.example</groupId>
+    
+  <artifactId>module2</artifactId>
+    
+  <packaging>pom</packaging>
+    
+  <version>3.0</version>
+    
+  <name>module2</name>
+    
+  <url>http://maven.apache.org</url>
+    
+  <dependencies>
+        
+    <dependency>
+            
+      <groupId>junit</groupId>
+            
+      <artifactId>junit</artifactId>
+            
+      <version>3.8.1</version>
+            
+      <scope>test</scope>
+          
+    </dependency>
+     
+      
+  </dependencies>
+    
+  <!--<properties>
+        <cyclonedx.projectType>application</cyclonedx.projectType>
+    </properties>-->
+             
+  <!-- <plugin>
+                <groupId>org.cyclonedx</groupId>
+                <artifactId>cyclonedx-maven-plugin</artifactId>
+                <version>2.7.0</version>
+                <configuration>
+                   
+                </configuration>
+            </plugin>-->
+             
+  <!-- <plugin>
+      <groupId>com.owasp.dependency-track</groupId>
+      <artifactId>dependency-track-maven-plugin</artifactId>
+      <configuration>
+        <bomUpload>
+          <projectType>application</projectType>
+        </bomUpload>
+      </configuration>
+    </plugin>-->
+          
+  
+
+  <modules>
+      
+    <module>submodule1</module>
+      
+  </modules>
+</project>

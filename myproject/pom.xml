@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+        
+  
+  
+  <modelVersion>4.0.0</modelVersion>
+        
+  
+  
+  <groupId>com.example</groupId>
+        
+  
+  
+  <artifactId>myproject</artifactId>
+        
+  
+  
+  <packaging>pom</packaging>
+        
+  
+  
+  <version>0.3</version>
+        
+  
+  
+  <name>myproject</name>
+        
+  
+  
+  <url>http://maven.apache.org</url>
+        
+  
+      
+  <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.outputTimestamp>2024-03-23T12:34:59Z</project.build.outputTimestamp>
+        <junit.version>4.13.2</junit.version>
+        <junit5.version>5.10.2</junit5.version>
+        <plugin-tools.version>3.11.0</plugin-tools.version>
+    </properties>
+  
+    
+  
+  <dependencies>
+                
+    
+    
+    <dependency>
+                        
+      
+      
+      <groupId>junit</groupId>
+                        
+      
+      
+      <artifactId>junit</artifactId>
+                        
+      
+      
+      <version>3.8.1</version>
+                        
+      
+      
+      <scope>test</scope>
+                      
+    
+    
+    </dependency>
+        
+    <dependency>
+          
+      <groupId>org.apache.commons</groupId>
+          
+      <artifactId>commons-collections4</artifactId>
+          
+      <version>4.0</version>
+          
+    </dependency>
+                
+    
+    
+    <dependency>
+                          
+      
+      
+      <groupId>org.apache.logging.log4j</groupId>
+                          
+      
+      
+      <artifactId>log4j-core</artifactId>
+                          
+      
+      
+      <version>2.17.1</version>
+                      
+    
+    
+    </dependency>
+                
+    
+    
+    <!-- Esempio 2: Apache Struts (vulnerabilità CVE-2017-5638) -->
+                
+    
+    
+    <dependency>
+                          
+      
+      
+      <groupId>org.apache.struts</groupId>
+                          
+      
+      
+      <artifactId>struts2-core</artifactId>
+                          
+      
+      
+      <version>2.5.26</version>
+                      
+    
+    
+    </dependency>
+                
+    
+    
+    <!-- Esempio 3: Spring Framework (vulnerabilità CVE-2020-5408) -->
+                
+    
+    
+    <dependency>
+                          
+      
+      
+      <groupId>org.springframework</groupId>
+                          
+      
+      
+      <artifactId>spring-core</artifactId>
+                          
+      
+      
+      <version>5.2.16.RELEASE</version>
+                      
+    
+    
+    </dependency>
+                
+    
+    
+    <dependency>
+                          
+      
+      
+      <groupId>org.apache.logging.log4j</groupId>
+                          
+      
+      
+      <artifactId>log4j-api</artifactId>
+                          
+      
+      
+      <version>2.15.0</version>
+                      
+    
+    
+    </dependency>
+                
+    
+    
+    <!-- Esempio 2: Apache Commons FileUpload (vulnerabilità CVE-2016-1000031) -->
+                
+    
+    
+    <dependency>
+                          
+      
+      
+      <groupId>commons-fileupload</groupId>
+                          
+      
+      
+      <artifactId>commons-fileupload</artifactId>
+                          
+      
+      
+      <version>1.3.3</version>
+                      
+    
+    
+    </dependency>
+                
+    
+    
+    <!-- Esempio 3: Jackson-databind (vulnerabilità CVE-2020-8840) -->
+                
+    
+    
+    <dependency>
+                          
+      
+      
+      <groupId>com.fasterxml.jackson.core</groupId>
+                          
+      
+      
+      <artifactId>jackson-databind</artifactId>
+                          
+      
+      
+      <version>2.11.4</version>
+                      
+    
+    
+    </dependency>
+                
+    
+    
+    <dependency>
+                      
+      
+      
+      <groupId>org.yaml</groupId>
+                      
+      
+      
+      <artifactId>snakeyaml</artifactId>
+                      
+      
+      
+      <version>1.28</version>
+                  
+    
+    
+    </dependency>
+            
+    
+    
+    <dependency>
+                      
+      
+      
+      <groupId>org.bouncycastle</groupId>
+                      
+      
+      
+      <artifactId>bcprov-jdk15on</artifactId>
+                      
+      
+      
+      <version>1.65</version>
+                  
+    
+    
+    </dependency>
+            
+    
+    
+    <dependency>
+                      
+      
+      
+      <groupId>org.apache.httpcomponents</groupId>
+                      
+      
+      
+      <artifactId>httpclient</artifactId>
+                      
+      
+      
+      <version>4.5.13</version>
+                  
+    
+    
+    </dependency>
+              
+  
+  
+  </dependencies>
+  
+    
+      
+  
+  
+  <build>
+                
+    
+    
+    <plugins>
+                        
+      
+      
+      <plugin>
+                                
+        
+        
+        <groupId>org.apache.maven.plugins</groupId>
+                                
+        
+        
+        <artifactId>maven-compiler-plugin</artifactId>
+                                
+        
+        
+        <version>3.8.1</version>
+                                
+        
+        
+        <configuration>
+                                        
+          
+          
+          <source>1.8</source>
+                                        
+          
+          
+          <target>1.8</target>
+                                      
+        
+        
+        </configuration>
+                              
+      
+      
+      </plugin>
+      <plugin>
+        <groupId>io.github.pmckeown</groupId>
+                                   
+                  
+        <artifactId>dependency-track-maven-plugin</artifactId>
+                                        
+          
+          
+          <version>1.7.1-SNAPSHOT</version>
+
+          <configuration>
+          <inherited>true</inherited>
+          <skip default-value="true">False</skip>
+                <dependencyTrackBaseUrl>http://localhost:8081</dependencyTrackBaseUrl>
+                <apiKey>odt_oKAqMj0YT66xdzkCh2R21MRv3h2gNP7b</apiKey>
+                 <!--<pollingConfig>
+                    <enabled>true</enabled>
+                    <pause>500</pause>
+                    <attempts>40</attempts>
+                    <timeUnit>MILLIS</timeUnit>
+                  </pollingConfig>-->
+                  <includeProjectVersion>true</includeProjectVersion>
+                <includeParentBom>false</includeParentBom>
+                <includeBomMatches>false</includeBomMatches>
+                <!--<bomLocation>target/bom.json</bomLocation>-->
+                <projectUuid>f6abded1-2e56-4630-8b7d-f6866ec3d334</projectUuid>
+                <vexJson>target/vex.json</vexJson>
+
+            </configuration>
+                                     
+         <!--<groupId>com.owasp.dependency-track</groupId>
+      <artifactId>dependency-track-maven-plugin</artifactId>
+      <version>4.2.2</version>
+       <executions>
+                    <execution>
+                        <goals>
+                            <goal>upload-bom</goal>
+                        </goals>
+                        <phase>verify</phase>
+                    </execution>
+        </executions>
+      <configuration>
+        <bomUpload>
+          <url>http://localhost:8081</url>
+          <apiKey>odt_oKAqMj0YT66xdzkCh2R21MRv3h2gNP7b</apiKey>
+          <failOnBomUploadFailure>true</failOnBomUploadFailure>
+        </bomUpload>
+      </configuration>-->
+          
+        <!--  <groupId>io.github.pmckeown</groupId>
+                                        
+          
+          
+          <artifactId>dependency-track-maven-plugin</artifactId>
+                                        
+          
+          
+          <version>1.0.0</version>
+                               
+          
+          
+          
+                                        
+          
+           
+          <executions>
+                    
+            <execution>
+                        
+              <id>upload-bom</id>
+                        
+              <goals>
+                            
+                <goal>upload-bom</goal>
+                          
+              </goals>
+                        
+              <phase>validate</phase>
+                        
+              <configuration>
+                            
+                            
+                <dependencyTrackBaseUrl>http://localhost:8081</dependencyTrackBaseUrl>
+                            
+                <apiKey>odt_oKAqMj0YT66xdzkCh2R21MRv3h2gNP7b</apiKey>
+                          
+              </configuration>
+                      
+            </execution>
+                    
+            <execution>
+                        
+              <id>generate-metrics</id>
+                        
+              <goals>
+                            
+                <goal>generate-metrics</goal>
+                          
+              </goals>
+                        
+              <phase>verify</phase>
+                        
+              <configuration>
+                            
+                
+                            
+                <dependencyTrackBaseUrl>http://localhost:8081</dependencyTrackBaseUrl>
+                            
+                <apiKey>odt_oKAqMj0YT66xdzkCh2R21MRv3h2gNP7b</apiKey>
+                          
+              </configuration>
+                      
+            </execution>
+                  
+          </executions>
+                  
+        -->
+        </plugin>
+                              
+      
+                        
+      <plugin>
+                                
+        
+        
+        <groupId>org.cyclonedx</groupId>
+                                
+        
+        
+        <artifactId>cyclonedx-maven-plugin</artifactId>
+                
+        <version>2.8.1-SNAPSHOT</version>
+                                
+        
+        
+        <executions>
+                                        
+          
+          
+          <execution>
+                                                
+            
+            
+            <phase>package</phase>
+                                                
+            
+            
+            <goals>
+                                                        
+              
+              
+              <goal>makeAggregateBom</goal>
+                                                      
+            
+            
+            </goals>
+                                              
+          
+          
+          </execution>
+                                      
+        
+        
+        </executions>
+                 
+        <configuration>
+                   
+          <aggregate>true</aggregate>
+                    
+               <outputReactorProjects>false</outputReactorProjects>
+
+          <!-- Specifica il tipo di progetto -->
+                    
+          <schemaVersion>1.5</schemaVersion>
+           
+                      
+          <includeBomSerialNumber>true</includeBomSerialNumber>
+                      
+          <includeCompileScope>true</includeCompileScope>
+                      
+          <includeProvidedScope>true</includeProvidedScope>
+                      
+          <includeRuntimeScope>true</includeRuntimeScope>
+                      
+          <includeSystemScope>true</includeSystemScope>
+                      
+          <includeTestScope>true</includeTestScope>
+                      
+          <includeLicenseText>true</includeLicenseText>
+                      
+          <!--<outputReactorProjects>true</outputReactorProjects>-->
+                <includeModules>true</includeModules>
+                      
+          <outputFormat>all</outputFormat>
+                      
+          <outputName>bom</outputName>
+                  
+        </configuration>
+                                
+    
+      
+      
+      </plugin>
+      <plugin>
+<groupId>com.example.plugin</groupId>
+<artifactId>my-plugin</artifactId>
+<version>1.0-SNAPSHOT</version>
+<!--  Aggiorna con la versione corretta del tuo plugin  -->
+<executions>
+<execution>
+<goals>
+<!-- <goal>modify-vex</goal> -->
+</goals>
+</execution>
+</executions>
+
+<configuration>
+<vexJson>target/vex.json</vexJson>
+</configuration>
+</plugin>
+      <!--<plugin>
+              <groupId>org.owasp</groupId>
+              <artifactId>dependency-check-maven</artifactId>
+              <version>9.2.0</version>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>aggregate</goal>
+                      </goals>
+                  </execution>
+                  
+              </executions>             
+              <configuration>
+                  <nvdApiKey>${env.NVDAPIKEY}</nvdApiKey>
+                  </configuration>
+            </plugin>-->
+      
+      
+    
+    
+    
+    </plugins>
+               
+    
+    
+    <pluginManagement>
+                        
+      
+      
+      <plugins>
+                 
+                                       
+        
+        
+        
+      
+      </plugins>
+                      
+    
+    
+    </pluginManagement>
+              
+  
+  
+  </build>
+  <!---
+       <profiles>
+        <profile>
+            <id>library</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.cyclonedx</groupId>
+                        <artifactId>cyclonedx-maven-plugin</artifactId>
+                        <configuration>
+                            <projectType>library</projectType>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>application</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.cyclonedx</groupId>
+                        <artifactId>cyclonedx-maven-plugin</artifactId>
+                        <configuration>
+                            <projectType>application</projectType>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+  -->
+
+   <profiles>
+        <profile>
+            <id>owasp-dependency-check</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.owasp</groupId>
+                        <artifactId>dependency-check-maven</artifactId>
+                        <version>9.2.0</version>
+                        <inherited>false</inherited>
+                        <configuration>
+                            <format>html</format>
+                            <!--<failBuildOnCVSS>7.0</failBuildOnCVSS>-->
+                            <suppressionFile>suppression.xml</suppressionFile>
+                            <!--<dataDirectory>${cve.database.dir}</dataDirectory>-->
+                            <nvdApiKey>${env.NVDAPIKEY}</nvdApiKey>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>aggregate</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+  
+  <modules>
+              
+    
+    
+    <module>module1</module>
+              
+    
+    
+    <module>module2</module>
+          
+    
+    <module>module3</module>
+      
+  </modules>
+  
+  
+    
+
+</project>
